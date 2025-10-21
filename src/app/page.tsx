@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -15,8 +16,17 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-dvh bg-gray-950 text-white">
+    <div className="flex flex-col gap-4 justify-center items-center h-dvh bg-gray-950 text-white">
       <h1 className="text-center text-2xl">Building{dotNumbers}</h1>
+      <div>
+        <Image
+          src="/coco.jpg"
+          alt="coco"
+          width={200}
+          height={200}
+          className="rounded-full aspect-square object-cover"
+        />
+      </div>
     </div>
   );
 }
